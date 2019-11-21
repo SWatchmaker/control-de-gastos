@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza ExpenseListItem 1`] = `
+<div>
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to="/edit/1"
+  >
+    Papa
+  </NavLink>
+  <p>
+    123
+     - 
+    0
+  </p>
+</div>
+`;

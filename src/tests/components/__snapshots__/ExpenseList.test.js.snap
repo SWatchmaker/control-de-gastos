@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza lista de gastos con gastos 1`] = `
+<div>
+  <h1>
+    Lista de Gastos
+  </h1>
+  <ExpenseListItem
+    amount={123}
+    createdAt={0}
+    description="Papa"
+    id="1"
+    key="1"
+    note=""
+  />
+  <ExpenseListItem
+    amount={321}
+    createdAt={-345600000}
+    description="Tomate"
+    id="2"
+    key="2"
+    note=""
+  />
+  <ExpenseListItem
+    amount={15000}
+    createdAt={345600000}
+    description="Pago Visa"
+    id="3"
+    key="3"
+    note="Mes Agosto"
+  />
+</div>
+`;
+
+exports[`Renderiza lista de gastos sin gastos 1`] = `
+<div>
+  <h1>
+    Lista de Gastos
+  </h1>
+  <p>
+    No hay gastos registrados
+  </p>
+</div>
+`;

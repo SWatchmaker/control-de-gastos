@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza página no encontrada 1`] = `
+<div>
+  404! - 
+  <Link
+    replace={false}
+    to="/"
+  >
+    Ir a página principal
+  </Link>
+</div>
+`;
