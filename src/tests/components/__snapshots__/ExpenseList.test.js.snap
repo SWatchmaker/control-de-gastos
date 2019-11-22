@@ -2,9 +2,6 @@
 
 exports[`Renderiza lista de gastos con gastos 1`] = `
 <div>
-  <h1>
-    Lista de Gastos
-  </h1>
   <ExpenseListItem
     amount={123}
     createdAt={0}
@@ -34,9 +31,6 @@ exports[`Renderiza lista de gastos con gastos 1`] = `
 
 exports[`Renderiza lista de gastos sin gastos 1`] = `
 <div>
-  <h1>
-    Lista de Gastos
-  </h1>
   <p>
     No hay gastos registrados
   </p>

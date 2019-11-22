@@ -10,9 +10,9 @@ exports[`Renderiza ExpenseListItem 1`] = `
     Papa
   </NavLink>
   <p>
-    123
-     - 
-    0
+    $1.23
+     -
+    31st December, 1969
   </p>
 </div>
 `;

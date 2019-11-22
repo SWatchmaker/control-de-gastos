@@ -14,12 +14,12 @@ exports[`Renderiza Filtro de gastos correctamente, con filtros alternativos. 1`]
     <option
       value="date"
     >
-      Date
+      Fecha
     </option>
     <option
       value="amount"
     >
-      Amount
+      Monto
     </option>
   </select>
   <DateRangePicker
@@ -122,12 +122,12 @@ exports[`Renderiza Filtro de gastos correctamente. 1`] = `
     <option
       value="date"
     >
-      Date
+      Fecha
     </option>
     <option
       value="amount"
     >
-      Amount
+      Monto
     </option>
   </select>
   <DateRangePicker

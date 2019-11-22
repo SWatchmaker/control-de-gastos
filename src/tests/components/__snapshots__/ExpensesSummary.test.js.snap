@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza resumen de gasto con 1 gasto. 1`] = `
+<div>
+  <h1>
+    N° Gastos: 
+    1
+     | Total Gastos:
+    $2.00
+  </h1>
+</div>
+`;
+
+exports[`Renderiza resumen de gasto con múltiples gastos. 1`] = `
+<div>
+  <h1>
+    N° Gastos: 
+    21
+     | Total Gastos:
+    $4,567.00
+  </h1>
+</div>
+`;
