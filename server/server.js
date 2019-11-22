@@ -10,7 +10,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(public, "index.html"));
 });
 
-app.listen(3000, port => {
+app.listen(port, () => {
   console.log("Servidor en línea!");
 });
 process.en;
