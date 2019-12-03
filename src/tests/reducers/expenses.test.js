@@ -79,3 +79,13 @@ test("Edita un gasto en base al ID inexistente, devuelve array original.", () =>
   const state = expensesReducer(expenses, action);
   expect(state).toEqual(expenses);
 });
+
+test("Establece gastos", () => {
+  const action = {
+    type: "SET_EXPENSES",
+    expenses: [expenses[1]]
+  };
+
+  const state = expensesReducer(expenses, action);
+  expect(state).toEqual([expenses[1]]);
+});

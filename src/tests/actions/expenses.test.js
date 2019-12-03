@@ -2,7 +2,9 @@ import {
   startAddExpense,
   addExpense,
   removeExpense,
-  editExpense
+  editExpense,
+  setExpenses,
+  startSetExpenses
 } from "../../actions/expenses";
 import expenses from "../fixtures/expenses";
 import configureMockStore from "redux-mock-store";
@@ -10,6 +12,18 @@ import thunk from "redux-thunk";
 import database from "../../firebase/firebase";
 
 const createMockStore = configureMockStore([thunk]);
+
+beforeEach(done => {
+  const expenseData = {};
+  expenses.forEach(({ id, description, note, amount, createdAt }) => {
+    expenseData[id] = { description, note, amount, createdAt };
+  });
+
+  database
+    .ref("expenses")
+    .set(expenseData)
+    .then(() => done());
+});
 
 test("Setea la acción de eliminar gasto.", () => {
   const action = removeExpense({ id: "123abc" });
@@ -107,4 +121,27 @@ test("Setea acción de añadir gasto con datos por defecto.", done => {
       expect(snapshot.val()).toEqual(expenseDefault);
       done();
     });
+});
+
+test("Setea acción SET_EXPENSES", () => {
+  const action = setExpenses(expenses);
+  expect(action).toEqual({
+    type: "SET_EXPENSES",
+    expenses
+  });
+});
+
+test("Trae gastos desde firebase", done => {
+  const store = createMockStore({});
+
+  store.dispatch(startSetExpenses()).then(() => {
+    const actions = store.getActions();
+
+    expect(actions[0]).toEqual({
+      type: "SET_EXPENSES",
+      expenses
+    });
+
+    done();
+  });
 });
