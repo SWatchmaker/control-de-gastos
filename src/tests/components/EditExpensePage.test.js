@@ -3,16 +3,16 @@ import { shallow } from "enzyme";
 import { EditExpensePage } from "../../components/EditExpensePage";
 import expenses from "../fixtures/expenses";
 
-let editExpense, removeExpense, history, wrapper;
+let editExpense, startRemoveExpense, history, wrapper;
 
 beforeEach(() => {
   editExpense = jest.fn();
-  removeExpense = jest.fn();
+  startRemoveExpense = jest.fn();
   history = { push: jest.fn() };
   wrapper = shallow(
     <EditExpensePage
       editExpense={editExpense}
-      removeExpense={removeExpense}
+      startRemoveExpense={startRemoveExpense}
       history={history}
     />
   );
@@ -31,5 +31,5 @@ test("Testea ennvío de formulario para añadir gasto.", () => {
 test("Testea ennvío de formulario para eliminar gasto.", () => {
   wrapper.find("button").prop("onClick")(expenses[2]);
   expect(history.push).toHaveBeenCalledWith("/");
-  expect(removeExpense).toHaveBeenLastCalledWith(expenses[2]);
+  expect(startRemoveExpense).toHaveBeenLastCalledWith(expenses[2]);
 });
