@@ -2,13 +2,31 @@
 
 exports[`Testea render de página de editar gastos. 1`] = `
 <div>
-  <ExpenseForm
-    onSubmit={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-header"
   >
-    Borrar
-  </button>
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Editar Gasto
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <ExpenseForm
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      Borrar Gasto
+    </button>
+  </div>
 </div>
 `;

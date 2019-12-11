@@ -1,16 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import moment from "moment";
 import numeral from "numeral";
 
 const ExpenseListItem = ({ description, amount, createdAt, id }) => (
-  <div>
-    <NavLink to={"/edit/" + id}>{description}</NavLink>
-    <p>
-      {numeral(amount / 100).format("$0,0.00")} -
-      {moment(createdAt).format("Do MMMM, YYYY")}
-    </p>
-  </div>
+  <Link className="list-item" to={"/edit/" + id}>
+    <div>
+      <h3 className="list-item__title">{description}</h3>
+      <span className="list-item__sub-title">
+        {moment(createdAt).format("Do MMMM, YYYY")}
+      </span>
+    </div>
+    <h3 className="list-item__data">
+      {numeral(amount / 100).format("$0,0.00")}
+    </h3>
+  </Link>
 );
 
 export default ExpenseListItem;

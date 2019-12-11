@@ -1,38 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renderiza lista de gastos con gastos 1`] = `
-<div>
-  <ExpenseListItem
-    amount={123}
-    createdAt={0}
-    description="Papa"
-    id="1"
-    key="1"
-    note=""
-  />
-  <ExpenseListItem
-    amount={321}
-    createdAt={-345600000}
-    description="Tomate"
-    id="2"
-    key="2"
-    note=""
-  />
-  <ExpenseListItem
-    amount={15000}
-    createdAt={345600000}
-    description="Pago Visa"
-    id="3"
-    key="3"
-    note="Mes Agosto"
-  />
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Gastos
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Gasto
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Monto
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={123}
+      createdAt={0}
+      description="Papa"
+      id="1"
+      key="1"
+      note=""
+    />
+    <ExpenseListItem
+      amount={321}
+      createdAt={-345600000}
+      description="Tomate"
+      id="2"
+      key="2"
+      note=""
+    />
+    <ExpenseListItem
+      amount={15000}
+      createdAt={345600000}
+      description="Pago Visa"
+      id="3"
+      key="3"
+      note="Mes Agosto"
+    />
+  </div>
 </div>
 `;
 
 exports[`Renderiza lista de gastos sin gastos 1`] = `
-<div>
-  <p>
-    No hay gastos registrados
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Gastos
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Gasto
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Monto
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No hay gastos registrados
+      </span>
+    </div>
+  </div>
 </div>
 `;
